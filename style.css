@@ -1,0 +1,85 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.daw-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.piano-roll, .sound-controls {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.piano-roll .controls {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.piano-roll .notes-container {
+    display: grid;
+    grid-template-columns: repeat(32, 30px); /* Initial grid */
+    grid-auto-rows: 20px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+}
+
+.piano-roll .note {
+    background-color: #007bff;
+    color: white;
+    border-radius: 2px;
+    cursor: grab;
+}
+
+.piano-roll .keyboard {
+    /* Basic visual keyboard styling */
+    display: grid;
+    grid-template-rows: repeat(12, 20px); /* 12 notes in an octave */
+    border: 1px solid #ccc;
+}
+
+.piano-roll .keyboard-key {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.piano-roll .keyboard-key.black {
+    background-color: #333;
+    color: white;
+    margin-left: 15px;
+    width: 20px;
+}
+
+.sound-controls label, .sound-controls select, .sound-controls input[type="range"] {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#export-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#export-button:hover {
+    background-color: #218838;
+}
